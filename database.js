@@ -8,7 +8,7 @@ const conn = mysql.createConnection({
     user:"admin",
     password:"W580q9VS",
     database:"curd",
-    connectTimeout:"100000"
+    connectTimeout:1000000
 })
 
 console.log(conn);
