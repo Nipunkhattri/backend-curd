@@ -3,11 +3,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const conn = mysql.createConnection({
-    host:process.env.Host,
-    port:process.env.port,
-    user:process.env.Username,
-    password:process.env.Password,
-    database:process.env.Database,
+    host:"mysql-125500-0.cloudclusters.net",
+    port:"19159",
+    user:"admin",
+    password:"W580q9VS",
+    database:"curd",
 })
 
 console.log(conn);
