@@ -1,10 +1,13 @@
 import mysql from "mysql";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const conn = mysql.createConnection({
-    host:"127.0.0.1",
-    user:'root',
-    password:'123456',
-    database:'curd'
+    host:process.env.Host,
+    user:process.env.Username,
+    password:process.env.Password,
+    database:process.env.database
 })
 
 conn.connect(function(err){
