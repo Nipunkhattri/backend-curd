@@ -69,9 +69,9 @@ export const get = async (req,res)=>{
     })
 }
 export const post = async (req,res)=>{
-    const {name,email,contact} = req.body;
+    const {name,email,contact ,Address, JobTitle} = req.body;
     connection.query(
-    "INSERT INTO contact_db (name, email , contact ) VALUES  (?,?,?)",[name, email,contact],(err, result) => {
+    "INSERT INTO contact_db (name, email , contact ,Address, JobTitle ) VALUES  (?,?,?)",[name, email,contact ,Address, JobTitle],(err, result) => {
     if(err){console.log(err)}
     else{res.send("added successfully")}
     })
