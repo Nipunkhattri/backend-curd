@@ -3,12 +3,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const conn = mysql.createConnection({
-    host:"mysql-125500-0.cloudclusters.net",
-    port:"19159",
+    host:"mysql-127751-0.cloudclusters.net",
+    port:"10154",
     user:"admin",
-    password:"W580q9VS",
+    password:"RZvwMvwi",
     database:"curd",
-    connectTimeout:1000000
 })
 
 console.log(conn);
