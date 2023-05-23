@@ -98,11 +98,10 @@ export const getdata = async (req,res)=>{
 export const updatedata = async (req,res)=>{
     const { email } = req.params;
     console.log(email)
-    const { name, contact } = req.body;
-  
+    const { name, contact ,JobTitle,Address } = req.body;
     connection.query(
-      "UPDATE contact_db SET name = ?, contact = ? WHERE email = ?",
-      [name, contact, email],
+      "UPDATE contact_db SET name = ?, contact = ?, JobTitle = ?, Address = ? WHERE email = ?",
+      [name, contact, email,JobTitle,Address],
       (err, result) => {
         if (err) {
           console.log(err);
